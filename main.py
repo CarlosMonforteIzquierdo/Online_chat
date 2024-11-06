@@ -11,20 +11,9 @@ def handle_message(message):
     if message != "User connected!":
         send(message, broadcast = True)
 
-@app.route('/')
+@app.route('/')         
 def index():
     return render_template('index.html')
 
 if __name__ == "__main__":
     socketio.run(app, host="localhost", allow_unsafe_werkzeug=True)
-
-
-
-
-
-
-
-
-
-
-
